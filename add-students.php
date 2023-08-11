@@ -44,7 +44,7 @@ $error="Something went wrong. Please try again";
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>SMS Admin| Student Admission< </title>
+        <title>SRMS Admin| Student Admission< </title>
         <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" >
         <link rel="stylesheet" href="css/font-awesome.min.css" media="screen" >
         <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen" >
@@ -121,14 +121,14 @@ else if($error){?>
 </div>
 
 <div class="form-group">
-<label for="default" class="col-sm-2 control-label">Rool Id</label>
+<label for="default" class="col-sm-2 control-label">Roll Id</label>
 <div class="col-sm-10">
 <input type="text" name="rollid" class="form-control" id="rollid" maxlength="5" required="required" autocomplete="off">
 </div>
 </div>
 
 <div class="form-group">
-<label for="default" class="col-sm-2 control-label">Email id)</label>
+<label for="default" class="col-sm-2 control-label">Email id</label>
 <div class="col-sm-10">
 <input type="email" name="emailid" class="form-control" id="email" required="required" autocomplete="off">
 </div>

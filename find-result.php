@@ -7,7 +7,7 @@ include('includes/config.php');?><!DOCTYPE html>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>School Result Management System Created By Kallesh D R</title>
+        <title>Student Result Management System</title>
         <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" >
         <link rel="stylesheet" href="css/font-awesome.min.css" media="screen" >
         <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen" >
@@ -24,7 +24,7 @@ include('includes/config.php');?><!DOCTYPE html>
                         <div class="panel login-box">
                             <div class="panel-heading">
                                 <div class="panel-title text-center">
-                                    <h4>School Result Management System</h4>
+                                    <h4>Student Result Management System</h4>
                                 </div>
                             </div>
                             <div class="panel-body p-20">
@@ -34,7 +34,7 @@ include('includes/config.php');?><!DOCTYPE html>
                                 <form action="result.php" method="post">
                                 	<div class="form-group">
                                 		<label for="rollid">Enter your Roll Id</label>
-                                        <input type="text" class="form-control" id="rollid" placeholder="Enter Your Roll Id" autocomplete="off" name="rollid" required>
+                                        <input type="text" class="form-control" id="rollid" placeholder="Enter Your Roll Id" autocomplete="off" name="rollid">
                                 	</div>
                                <div class="form-group">
                                                         <label for="default" class="col-sm-2 control-label">Class</label>
@@ -63,7 +63,7 @@ foreach($results as $result)
                                     </div>
 
                                        <div class="col-sm-6">
-                                                               <a href="Login.html">Back to Home</a>
+                                                               <a href="index.php">Back to Home</a>
                                                             </div>
                                 </form>
 
@@ -72,7 +72,7 @@ foreach($results as $result)
                             </div>
                         </div>
                         <!-- /.panel -->
-                        <p class="text-muted text-center"><small>Copyright © By Kallesh D R <a href="http://kallesh-com.webnode.in">Kallesh D R</a> 2017</small></p>
+                        <p class="text-muted text-center"><small>Copyright © 2020 SRMS</small></p>
                     </div>
                     <!-- /.col-md-6 col-md-offset-3 -->
                 </div>

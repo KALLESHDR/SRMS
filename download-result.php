@@ -1,10 +1,15 @@
 <?php
-namespace Dompdf;
-require_once 'dompdf/autoload.inc.php';
 session_start();
-ob_start();
+
 require_once('includes/configpdo.php');
-error_reporting(0);
+
+
+require"dompdf/autoload.inc.php";
+
+use Dompdf\Dompdf; 
+
+ob_start();
+//error_reporting(0);
 ?>
 
 <html>
@@ -39,7 +44,11 @@ td {
 
 
 </style>
-<?php $rollid=$_SESSION['rollid'];
+
+
+<?php 
+$totlcount=0;
+$rollid=$_SESSION['rollid'];
 $classid=$_SESSION['classid'];
 $qery = "SELECT   tblstudents.StudentName,tblstudents.RollId,tblstudents.RegDate,tblstudents.StudentId,tblstudents.Status,tblclasses.ClassName,tblclasses.Section from tblstudents join tblclasses on tblclasses.id=tblstudents.ClassId where tblstudents.RollId=? and tblstudents.ClassId=?";
 $stmt21 = $mysqli->prepare($qery);
@@ -106,12 +115,27 @@ $cnt++;}
                     </div>
 </html>
 
+
+
+
+
+
 <?php
 $html = ob_get_clean();
-$dompdf = new DOMPDF();
-$dompdf->setPaper('A4', 'landscape');
-$dompdf->load_html($html);
-$dompdf->render();
-//dompdf->stream("",array("Attachment" => false));
-$dompdf->stream("result.pdf");
+
+
+$dompdf = new dompdf();
+
+$dompdf->set_option('enable_html5_parser', TRUE);
+
+$dompdf->loadHtml($html); 
+ 
+
+$dompdf->setPaper('A4', 'landscape'); 
+ 
+
+$dompdf->render(); 
+ 
+
+$dompdf->stream("result");
 ?>
